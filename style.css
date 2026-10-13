@@ -21,13 +21,24 @@ header a {
   font-size: x-large;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
-.nav a:hover {
+nav a:hover {
   text-decoration: underline;
+}
+
+#hem {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid rgb(46, 129, 46);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
