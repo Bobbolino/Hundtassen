@@ -175,6 +175,46 @@ const omdomen = [
     namn: "Maria",
     text: "Sigge hade en fin vistelse medan vi var bortresta.",
   },
+  {
+    namn: "Monique",
+    text: "Jag hinner inte säga ordet Tass innan Rambo kommer glatt skuttandes och viftar på svansen. Kommer definitivt bli många roliga besök här igen!",
+  },
+  {
+    namn: "Fredrik",
+    text: "Vår golden retriever Charlie älskar verkligen att vara här. Rekommenderas varmt!",
+  },
+  {
+    namn: "Emma",
+    text: "Första gången vi lämnade Bella på hundpensionat och allt fungerade hur bra som helst.",
+  },
+  {
+    namn: "Anders",
+    text: "Smidig bokning, trevligt bemötande och framför allt en väldigt nöjd hund.",
+  },
+  {
+    namn: "Linda",
+    text: "Rocky blir helt till sig så fort vi svänger in på parkeringen. Det säger väl allt!",
+  },
+  {
+    namn: "Peter",
+    text: "Bra kommunikation och ett genuint engagemang för hundarna. Vi kommer tillbaka!",
+  },
+  {
+    namn: "Sofia",
+    text: "Känns skönt att veta att Molly har det bra medan vi arbetar.",
+  },
+  {
+    namn: "Daniel",
+    text: "Bamse sov som en stock efter en heldag hos Tassen. Fem tassar av fem!",
+  },
+  {
+    namn: "Camilla",
+    text: "Nina och Pelle är fantastiska med vår lilla Doris. Vi kunde inte vara nöjdare.",
+  },
+  {
+    namn: "Oscar",
+    text: "Vi har testat flera hunddagis tidigare men Tassen är helt klart vår favorit.",
+  },
 ];
 
 function visaOmdome() {
