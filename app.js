@@ -129,19 +129,38 @@ bokningsForm.addEventListener("submit", (event) => {
 
   const namn = hundNamn.value.trim();
   const datum = bokningsDatum.value;
+  const idag = new Date().toLocaleDateString("sv-SE");
+
+  bokningsDatum.min = idag;
 
   if (namn === "" || datum === "") {
     meddelande.textContent = "Fyll i hundens namn och önskat datum.";
     return;
   }
-  const idag = new Date().toLocaleDateString("sv-SE");
+
+  if (!/\p{L}/u.test(namn)) {
+    meddelande.textContent = "Hundens namn måste innehålla minst en bokstav.";
+    return;
+  }
 
   if (datum < idag) {
     meddelande.textContent = "Välj dagens datum eller ett senare datum.";
     return;
   }
 
-  // Ändra datan och spara först, rita sedan om listan.
+  const finnsRedan = bokningslista.bokningar.some((bokning) => {
+    return (
+      bokning.hund.trim().toLowerCase() === namn.toLowerCase() &&
+      bokning.datum === datum
+    );
+  });
+
+  if (finnsRedan) {
+    meddelande.textContent =
+      "Det finns redan en förfrågan för den hunden på det datumet.";
+    return;
+  }
+
   bokningslista.laggTill(namn, datum);
   renderaBokningar();
 
