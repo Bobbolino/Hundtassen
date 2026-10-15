@@ -82,6 +82,7 @@ const bokningslista = new Bokningslista();
 const bokningsForm = document.getElementById("bokningsForm");
 const hundNamn = document.getElementById("hundNamn");
 const bokningsDatum = document.getElementById("bokningsDatum");
+bokningsDatum.min = new Date().toLocaleDateString("sv-SE");
 const listaElement = document.getElementById("bokningsLista");
 const meddelande = document.getElementById("meddelande");
 
@@ -131,6 +132,12 @@ bokningsForm.addEventListener("submit", (event) => {
 
   if (namn === "" || datum === "") {
     meddelande.textContent = "Fyll i hundens namn och önskat datum.";
+    return;
+  }
+  const idag = new Date().toLocaleDateString("sv-SE");
+
+  if (datum < idag) {
+    meddelande.textContent = "Välj dagens datum eller ett senare datum.";
     return;
   }
 
