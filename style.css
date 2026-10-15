@@ -53,12 +53,12 @@ section {
   min-width: 0;
   padding: 20px;
   border: 2px solid rgb(46, 129, 46);
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: white;
   overflow-wrap: break-word;
 }
 
-#Priser {
+#priser {
   grid-column: 1 / -1;
 }
 
@@ -117,6 +117,15 @@ button,
   color: white;
   border: none;
   cursor: pointer;
+}
+
+#om-oss {
+  display: flex;
+  flex-direction: column;
+}
+
+#om-oss img {
+  border-radius: 1rem;
 }
 
 .knapp {
