@@ -1,5 +1,13 @@
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: whitesmoke;
+  color: #222;
 }
 
 header {
@@ -13,7 +21,6 @@ header {
 
 header a {
   text-decoration: none;
-  background-color: rgb(46, 129, 46);
   color: whitesmoke;
 }
 
@@ -32,13 +39,161 @@ nav a:hover {
   text-decoration: underline;
 }
 
-#hem {
-  margin: 20px;
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section {
+  min-width: 0;
   padding: 20px;
   border: 2px solid rgb(46, 129, 46);
   border-radius: 10px;
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
+  background-color: white;
   overflow-wrap: break-word;
+}
+
+#Priser {
+  grid-column: 1 / -1;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.prislista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+article {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input,
+button,
+.knapp {
+  font: inherit;
+  padding: 10px;
+  min-height: 44px;
+  border-radius: 5px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid gray;
+}
+
+button,
+.knapp {
+  background-color: rgb(46, 129, 46);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.knapp {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:hover,
+.knapp:hover {
+  background-color: rgb(32, 95, 32);
+}
+
+#status {
+  font-weight: bold;
+}
+
+#meddelande {
+  color: #8b1e1e;
+}
+
+#bokningsLista {
+  list-style: none;
+  padding: 0;
+}
+
+#bokningsLista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+#bokningsLista button {
+  flex-shrink: 0;
+}
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgb(46, 129, 46);
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  nav {
+    gap: 20px;
+  }
+
+  .prislista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main,
+  .prislista {
+    grid-template-columns: 1fr;
+  }
+
+  #bokningsLista li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
